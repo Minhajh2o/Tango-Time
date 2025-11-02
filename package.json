@@ -14,7 +14,6 @@
     "daisyui": "^5.4.2",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
-    "react-router": "^7.9.5",
     "tailwindcss": "^4.1.16"
   },
   "devDependencies": {
