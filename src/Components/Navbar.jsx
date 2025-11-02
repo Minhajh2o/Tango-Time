@@ -46,6 +46,11 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end flex gap-2">
+        {/* Login Button */}
+        <Link to="/auth/login" className="btn btn-primary">
+          Login
+        </Link>
+        {/* Profile */}
         <div className="dropdown dropdown-end">
           <div
             tabIndex={0}
