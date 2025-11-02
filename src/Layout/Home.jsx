@@ -66,7 +66,7 @@ const Home = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-          <div className="card bg-gradient-to-br from-blue-500 to-blue-600 text-white shadow-xl">
+          <div className="card bg-linear-to-br from-blue-500 to-blue-600 text-white shadow-xl">
             <div className="card-body">
               <div className="text-4xl mb-4">
                 <FaAward />
@@ -81,7 +81,7 @@ const Home = () => {
             </div>
           </div>
 
-          <div className="card bg-gradient-to-br from-purple-500 to-purple-600 text-white shadow-xl">
+          <div className="card bg-linear-to-br from-purple-500 to-purple-600 text-white shadow-xl">
             <div className="card-body">
               <div className="text-4xl mb-4">
                 <FaChalkboardTeacher />
@@ -96,7 +96,7 @@ const Home = () => {
             </div>
           </div>
 
-          <div className="card bg-gradient-to-br from-pink-500 to-pink-600 text-white shadow-xl">
+          <div className="card bg-linear-to-br from-pink-500 to-pink-600 text-white shadow-xl">
             <div className="card-body">
               <div className="text-4xl mb-4">
                 <FaLightbulb />
