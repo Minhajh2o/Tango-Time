@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router';
 import { FaStar, FaGlobe, FaHeart, FaHandshake, FaUsers, FaMapMarkerAlt, FaVideo, FaCheckCircle } from 'react-icons/fa';
 import HeroSection from './common/HeroSection';

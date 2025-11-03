@@ -1,4 +1,3 @@
-import React from 'react';
 import CountUp from 'react-countup';
 import { FaUsers, FaBookOpen, FaBook, FaVideo } from 'react-icons/fa';
 
@@ -14,7 +13,7 @@ const SuccessStats = () => {
             </div>
             <div className="stat-title">User Count</div>
             <div className="stat-value text-primary">
-              <CountUp end={10000} duration={3} separator="," />+
+              <CountUp end={10000} duration={3} separator="," useEasing={false} />+
             </div>
             <div className="stat-desc">Active learners</div>
           </div>
@@ -25,7 +24,7 @@ const SuccessStats = () => {
             </div>
             <div className="stat-title">Lesson Count</div>
             <div className="stat-value text-secondary">
-              <CountUp end={250} duration={3} />+
+              <CountUp end={250} duration={3} useEasing={false} />+
             </div>
             <div className="stat-desc">Interactive lessons</div>
           </div>
@@ -36,7 +35,7 @@ const SuccessStats = () => {
             </div>
             <div className="stat-title">Vocabulary Count</div>
             <div className="stat-value text-accent">
-              <CountUp end={5000} duration={3} separator="," />+
+              <CountUp end={5000} duration={3} separator="," useEasing={false} />+
             </div>
             <div className="stat-desc">Japanese words</div>
           </div>
@@ -47,7 +46,7 @@ const SuccessStats = () => {
             </div>
             <div className="stat-title">Tutorial Count</div>
             <div className="stat-value text-info">
-              <CountUp end={180} duration={3} />+
+              <CountUp end={180} duration={3} useEasing={false} />+
             </div>
             <div className="stat-desc">Video tutorials</div>
           </div>

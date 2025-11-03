@@ -6,7 +6,7 @@ const HeroSection = ({ title, subtitle, primaryButtonText, primaryButtonLink, se
   const gradientClasses = gradient || "from-blue-600 via-purple-600 to-pink-600";
   
   return (
-    <div className={`hero min-h-[500px] bg-gradient-to-r ${gradientClasses} text-white`}>
+    <div className={`hero min-h-[500px] bg-linear-to-r ${gradientClasses} text-white`}>
       <div className="hero-content text-center">
         <div className="max-w-2xl">
           <h1 className="mb-5 text-5xl font-bold">{title}</h1>

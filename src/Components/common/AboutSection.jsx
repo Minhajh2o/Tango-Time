@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router';
 import { FaGraduationCap, FaBook, FaHeadphones, FaUserFriends } from 'react-icons/fa';
 

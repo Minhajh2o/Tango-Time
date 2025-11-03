@@ -137,7 +137,7 @@ const Tutorial = () => {
           </div>
         )}
 
-        <div className="card bg-gradient-to-r from-blue-500 to-purple-500 text-white shadow-xl">
+        <div className="card bg-linear-to-r from-blue-500 to-purple-500 text-white shadow-xl">
           <div className="card-body text-center">
             <h3 className="card-title text-2xl justify-center mb-4">Ready to Start Learning?</h3>
             <p className="text-lg mb-4">Begin your Japanese vocabulary journey with our structured learning path</p>
