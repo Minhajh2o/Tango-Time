@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router';
 import { FaBullseye, FaChalkboardTeacher, FaBook, FaClock, FaAward, FaLightbulb } from 'react-icons/fa';
-import BannerSlider from '../Components/common/BannerSlider';
+import Banner from '../Components/common/Banner';
 import AboutSection from '../Components/common/AboutSection';
 import SuccessStats from '../Components/common/SuccessStats';
 import FeatureCard from '../Components/common/FeatureCard';
@@ -32,8 +32,8 @@ const Home = () => {
 
   return (
     <div className="min-h-screen">
-      {/* Banner/Slider Section */}
-      <BannerSlider />
+      {/* Banner Section */}
+      <Banner />
 
       {/* About Section */}
       <AboutSection />

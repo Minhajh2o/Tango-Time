@@ -3,17 +3,29 @@ import Home from "../Layout/Home";
 import About from "../Components/About";
 import Tutorial from "../Components/Tutorial";
 import StartLearning from "../Components/StartLearning";
+import Login from "../Components/Login";
+import Register from "../Components/Register";
 import Layout from "../Layout/Layout";
+import PrivateRoute from "./PrivateRoute";
 
 const Router = createBrowserRouter([
   {
     path: "/",
-    Component: Layout,
+    element: <Layout />,
     children: [
-      { index: true, Component: Home },
-      { path: "start-learning", Component: StartLearning },
-      { path: "tutorial", Component: Tutorial },
-      { path: "about", Component: About },
+      { index: true, element: <Home /> },
+      { path: "start-learning", element: <StartLearning /> },
+      {
+        path: "tutorial",
+        element: (
+          <PrivateRoute>
+            <Tutorial />
+          </PrivateRoute>
+        ),
+      },
+      { path: "about", element: <About /> },
+      { path: "login", element: <Login /> },
+      { path: "register", element: <Register /> },
     ],
   },
 ]);
