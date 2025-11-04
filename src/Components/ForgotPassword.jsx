@@ -72,7 +72,7 @@ const ForgotPassword = () => {
           <h2 className="text-4xl font-bold text-gray-900 mb-2">
             Forgot Password?
           </h2>
-          <p className="text-gray-600">
+          <p className="text-gray-500">
             No worries! Enter your email and we'll send you reset instructions.
           </p>
         </div>
@@ -100,7 +100,7 @@ const ForgotPassword = () => {
                   />
                 </div>
                 <label className="label">
-                  <span className="label-text-alt text-gray-600">
+                  <span className="label-text-alt text-gray-500">
                     We'll send a password reset link to this email
                   </span>
                 </label>
@@ -127,7 +127,7 @@ const ForgotPassword = () => {
             <div className="divider">OR</div>
 
             <div className="text-center">
-              <p className="text-sm text-gray-600">
+              <p className="text-sm text-gray-500">
                 Remember your password?{' '}
                 <Link to="/login" className="link link-primary font-semibold">
                   Sign in here
@@ -141,7 +141,7 @@ const ForgotPassword = () => {
         <div className="card bg-base-100 shadow-lg mt-6">
           <div className="card-body p-6">
             <h3 className="font-semibold text-lg mb-3">What happens next?</h3>
-            <ol className="list-decimal list-inside space-y-2 text-sm text-gray-600">
+            <ol className="list-decimal list-inside space-y-2 text-sm text-gray-500">
               <li>We'll send a password reset link to your email</li>
               <li>Check your inbox (and spam folder)</li>
               <li>Click the link in the email</li>

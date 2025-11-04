@@ -111,7 +111,7 @@ const Login = () => {
           <h2 className="text-4xl font-bold text-gray-900 mb-2">
             Welcome Back!
           </h2>
-          <p className="text-gray-600">
+          <p className="text-gray-500">
             Sign in to continue your Japanese learning journey
           </p>
         </div>
@@ -168,9 +168,9 @@ const Login = () => {
                     className="absolute inset-y-0 right-0 pr-3 flex items-center"
                   >
                     {showPassword ? (
-                      <FaEyeSlash className="text-gray-400 hover:text-gray-600" />
+                      <FaEyeSlash className="text-gray-400 hover:text-gray-500" />
                     ) : (
-                      <FaEye className="text-gray-400 hover:text-gray-600" />
+                      <FaEye className="text-gray-400 hover:text-gray-500" />
                     )}
                   </button>
                 </div>
@@ -230,7 +230,7 @@ const Login = () => {
 
             {/* Sign Up Link */}
             <div className="text-center mt-6">
-              <p className="text-sm text-gray-600">
+              <p className="text-sm text-gray-500">
                 Don't have an account?{' '}
                 <Link to="/register" className="link link-primary font-semibold">
                   Sign up now

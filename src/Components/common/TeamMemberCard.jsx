@@ -14,7 +14,7 @@ const TeamMemberCard = ({ name, role, bio, expertise }) => {
         </div>
         <h3 className="card-title text-2xl">{name}</h3>
         <p className="text-lg font-semibold text-primary">{role}</p>
-        <p className="text-gray-600 mt-2">{bio}</p>
+        <p className="text-gray-500 mt-2">{bio}</p>
         <div className="mt-4">
           <span className="badge badge-outline">{expertise}</span>
         </div>

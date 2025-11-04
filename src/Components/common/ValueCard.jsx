@@ -8,7 +8,7 @@ const ValueCard = ({ icon: Icon, title, description }) => {
           {Icon && <Icon />}
         </div>
         <h3 className="card-title justify-center text-xl">{title}</h3>
-        <p className="text-gray-600">{description}</p>
+        <p className="text-gray-500">{description}</p>
       </div>
     </div>
   );

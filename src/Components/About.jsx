@@ -149,7 +149,7 @@ const About = () => {
           <div className="card bg-base-100 shadow-xl">
             <div className="card-body">
               <h2 className="card-title text-3xl justify-center mb-4">Join Our Community</h2>
-              <p className="text-lg text-gray-600 mb-6">
+              <p className="text-lg text-gray-500 mb-6">
                 Ready to start your Japanese vocabulary journey? Join thousands of students learning with us today.
               </p>
               <div className="card-actions justify-center">

@@ -15,7 +15,7 @@ const TutorialCard = ({ title, difficulty, duration, description, thumbnail: Ico
             {duration}
           </div>
         </div>
-        <p className="text-gray-600">{description}</p>
+        <p className="text-gray-500">{description}</p>
         <div className="card-actions justify-end mt-4">
           <button onClick={onWatch} className="btn btn-primary">
             <FaPlay className="mr-2" />

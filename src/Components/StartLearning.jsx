@@ -32,7 +32,7 @@ const StartLearning = () => {
                 <div className="card-body items-center text-center">
                   <FaBook className="text-5xl text-primary mb-2" />
                   <h3 className="card-title text-2xl">{lesson.title}</h3>
-                  <p className="text-sm text-gray-600">10 vocabularies</p>
+                  <p className="text-sm text-gray-500">10 vocabularies</p>
                   <div className="badge badge-primary badge-outline mt-2">Start Learning</div>
                 </div>
               </Link>
@@ -48,7 +48,7 @@ const StartLearning = () => {
                 <FaGraduationCap className="text-primary" />
                 Learn Japanese Alphabet
               </h2>
-              <p className="text-lg text-gray-600 mb-6">
+              <p className="text-lg text-gray-500 mb-6">
                 Master Hiragana and Katakana - the foundation of Japanese writing system
               </p>
               

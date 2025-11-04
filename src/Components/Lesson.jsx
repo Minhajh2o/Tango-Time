@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate, Link } from 'react-router';
-import { FaArrowLeft, FaInfoCircle } from 'react-icons/fa';
+import { FaArrowLeft, FaInfoCircle, FaVolumeUp } from 'react-icons/fa';
 import vocabulariesData from '../data/vocabularies.json';
+import VocabularyModal from './VocabularyModal';
 
 const Lesson = () => {
   const { lesson_no } = useParams();
@@ -22,13 +23,13 @@ const Lesson = () => {
   const getDifficultyColor = (difficulty) => {
     switch (difficulty.toLowerCase()) {
       case 'easy':
-        return 'border-success bg-green-50';
+        return 'border-success bg-green-100';
       case 'medium':
-        return 'border-warning bg-yellow-50';
+        return 'border-warning bg-yellow-100';
       case 'difficult':
-        return 'border-error bg-red-50';
+        return 'border-error bg-red-100';
       default:
-        return 'border-info bg-blue-50';
+        return 'border-info bg-blue-100';
     }
   };
 
@@ -56,6 +57,24 @@ const Lesson = () => {
     setSelectedVocab(null);
   };
 
+  // Text-to-speech function for Japanese pronunciation
+  const speakWord = (word) => {
+    if ('speechSynthesis' in window) {
+      // Cancel any ongoing speech
+      window.speechSynthesis.cancel();
+      
+      const utterance = new SpeechSynthesisUtterance(word);
+      utterance.lang = 'ja-JP'; // Japanese language
+      utterance.rate = 0.8; // Slightly slower for clarity
+      utterance.pitch = 1;
+      utterance.volume = 1;
+      
+      window.speechSynthesis.speak(utterance);
+    } else {
+      alert('Text-to-speech is not supported in your browser.');
+    }
+  };
+
   return (
     <div className="min-h-screen bg-base-200">
       {/* Page Header */}
@@ -78,7 +97,7 @@ const Lesson = () => {
       <div className="container mx-auto px-4 py-12">
         {vocabularies.length === 0 ? (
           <div className="text-center py-20">
-            <p className="text-2xl text-gray-600">No vocabularies found for this lesson.</p>
+            <p className="text-2xl text-gray-500">No vocabularies found for this lesson.</p>
             <Link to="/start-learning" className="btn btn-primary mt-4">
               Go Back to Lessons
             </Link>
@@ -104,15 +123,24 @@ const Lesson = () => {
                       >
                         {vocab.difficulty}
                       </span>
-                      <span className="badge badge-outline">
+                      <span className="badge badge-outline text-primary">
                         {vocab.part_of_speech}
                       </span>
                     </div>
 
-                    {/* Word in Japanese */}
-                    <h2 className="card-title text-3xl font-bold text-primary mb-2">
-                      {vocab.word}
-                    </h2>
+                    {/* Word in Japanese with Speaker Icon */}
+                    <div className="flex items-center gap-2 mb-2">
+                      <h2 className="card-title text-3xl font-bold text-primary">
+                        {vocab.word}
+                      </h2>
+                      <button
+                        onClick={() => speakWord(vocab.word)}
+                        className="btn btn-circle btn-sm btn-primary"
+                        title="Listen to pronunciation"
+                      >
+                        <FaVolumeUp />
+                      </button>
+                    </div>
 
                     {/* Pronunciation */}
                     <p className="text-xl text-gray-700 italic mb-2">
@@ -153,52 +181,12 @@ const Lesson = () => {
         )}
       </div>
 
-      {/* Modal for "When to Say" */}
-      {showModal && selectedVocab && (
-        <div className="modal modal-open">
-          <div className="modal-box max-w-2xl">
-            <h3 className="font-bold text-2xl mb-4 text-primary">
-              {selectedVocab.word}
-            </h3>
-            
-            <div className="space-y-4">
-              {/* Word Info */}
-              <div>
-                <p className="text-lg italic text-gray-600">
-                  {selectedVocab.pronunciation}
-                </p>
-                <p className="text-xl font-semibold">
-                  Meaning: {selectedVocab.meaning}
-                </p>
-              </div>
-
-              {/* When to Say */}
-              <div className="bg-blue-50 p-4 rounded-lg">
-                <h4 className="font-semibold text-lg mb-2 flex items-center">
-                  <FaInfoCircle className="mr-2 text-primary" />
-                  When to Say:
-                </h4>
-                <p className="text-gray-900">{selectedVocab.when_to_say}</p>
-              </div>
-
-              {/* Example */}
-              <div className="bg-purple-50 p-4 rounded-lg border-l-4 border-primary">
-                <h4 className="font-semibold text-primary text-lg mb-2">Example:</h4>
-                <p className="text-gray-900 whitespace-pre-line">
-                  {selectedVocab.example}
-                </p>
-              </div>
-            </div>
-
-            <div className="modal-action">
-              <button onClick={closeModal} className="btn btn-primary">
-                Close
-              </button>
-            </div>
-          </div>
-          <div className="modal-backdrop" onClick={closeModal}></div>
-        </div>
-      )}
+      {/* Vocabulary Modal */}
+      <VocabularyModal 
+        vocab={selectedVocab}
+        isOpen={showModal}
+        onClose={closeModal}
+      />
     </div>
   );
 };

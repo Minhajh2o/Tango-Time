@@ -162,7 +162,7 @@ const Register = () => {
           <h2 className="text-4xl font-bold text-gray-900 mb-2">
             Create Account
           </h2>
-          <p className="text-gray-600">
+          <p className="text-gray-500">
             Join TangoTime and start your Japanese learning adventure
           </p>
         </div>
@@ -265,9 +265,9 @@ const Register = () => {
                     className="absolute inset-y-0 right-0 pr-3 flex items-center"
                   >
                     {showPassword ? (
-                      <FaEyeSlash className="text-gray-400 hover:text-gray-600" />
+                      <FaEyeSlash className="text-gray-400 hover:text-gray-500" />
                     ) : (
-                      <FaEye className="text-gray-400 hover:text-gray-600" />
+                      <FaEye className="text-gray-400 hover:text-gray-500" />
                     )}
                   </button>
                 </div>
@@ -276,7 +276,7 @@ const Register = () => {
                 {formData.password && (
                   <div className="mt-2">
                     <div className="flex items-center justify-between mb-1">
-                      <span className="text-xs text-gray-600">Password strength:</span>
+                      <span className="text-xs text-gray-500">Password strength:</span>
                       <span className={`text-xs font-semibold ${
                         passwordStrength.strength <= 2 ? 'text-error' :
                         passwordStrength.strength <= 3 ? 'text-warning' :
@@ -328,9 +328,9 @@ const Register = () => {
                     className="absolute inset-y-0 right-0 pr-3 flex items-center"
                   >
                     {showConfirmPassword ? (
-                      <FaEyeSlash className="text-gray-400 hover:text-gray-600" />
+                      <FaEyeSlash className="text-gray-400 hover:text-gray-500" />
                     ) : (
-                      <FaEye className="text-gray-400 hover:text-gray-600" />
+                      <FaEye className="text-gray-400 hover:text-gray-500" />
                     )}
                   </button>
                 </div>
@@ -406,7 +406,7 @@ const Register = () => {
 
             {/* Sign In Link */}
             <div className="text-center mt-6">
-              <p className="text-sm text-gray-600">
+              <p className="text-sm text-gray-500">
                 Already have an account?{' '}
                 <Link to="/login" className="link link-primary font-semibold">
                   Sign in here
@@ -420,7 +420,7 @@ const Register = () => {
         <div className="mt-6 card bg-base-100 shadow-lg">
           <div className="card-body p-4">
             <h3 className="font-semibold text-sm mb-2">Why join TangoTime?</h3>
-            <ul className="space-y-1 text-xs text-gray-600">
+            <ul className="space-y-1 text-xs text-gray-500">
               <li className="flex items-center gap-2">
                 <FaCheckCircle className="text-success" />
                 Access to 5000+ Japanese vocabulary words
