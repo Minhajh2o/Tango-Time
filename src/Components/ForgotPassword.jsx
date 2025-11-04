@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router';
 import { FaEnvelope, FaArrowLeft } from 'react-icons/fa';
-import { getAuth, sendPasswordResetEmail } from 'firebase/auth';
 import { toast } from 'react-toastify';
+import { AuthContext } from '../Provider/AuthProvider';
 
 const ForgotPassword = () => {
+  const { resetPassword } = useContext(AuthContext);
   const location = useLocation();
   const navigate = useNavigate();
   const [email, setEmail] = useState(location.state?.email || '');
@@ -26,8 +27,7 @@ const ForgotPassword = () => {
     setIsLoading(true);
 
     try {
-      const auth = getAuth();
-      await sendPasswordResetEmail(auth, email);
+      await resetPassword(email);
       
       toast.success('Password reset email sent! Check your inbox.', {
         position: 'top-right',

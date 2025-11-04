@@ -1,7 +1,6 @@
-import React from "react";
-import { Link } from "react-router";
-import { FaFacebookF, FaInstagram, FaLinkedinIn, FaYoutube, FaApple, FaMicrosoft } from "react-icons/fa";
 import { FaGooglePlay } from "react-icons/fa";
+import { Link } from "react-router";
+import { FaFacebookF, FaInstagram, FaLinkedinIn, FaYoutube, FaApple, FaMicrosoft, FaBook } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -10,7 +9,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* About Section */}
           <div>
-            <h3 className="text-xl font-bold mb-4">TangoTime</h3>
+            <Link to="/" className="text-xl font-bold mb-4 inline-flex items-center"><FaBook className="mr-2" />TangoTime</Link>
             <p className="text-gray-400 text-sm mb-4">
               Master Japanese vocabulary with our comprehensive learning platform. 
               Join thousands of students worldwide.
