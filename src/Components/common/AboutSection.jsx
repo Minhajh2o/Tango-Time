@@ -35,12 +35,12 @@ const AboutSection = () => {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-12">
         <div>
           <h3 className="text-3xl font-bold mb-4">Our Mission</h3>
-          <p className="text-lg text-gray-700 leading-relaxed mb-4">
+          <p className="text-lg text-gray-500 leading-relaxed mb-4">
             At TangoTime, our mission is to make Japanese vocabulary learning accessible, 
             engaging, and effective for everyone. We believe that mastering vocabulary is 
             the foundation of language fluency, and we're here to guide you through every step.
           </p>
-          <p className="text-lg text-gray-700 leading-relaxed mb-6">
+          <p className="text-lg text-gray-500 leading-relaxed mb-6">
             Whether you're preparing for the JLPT exam, planning to visit Japan, or simply 
             passionate about the Japanese language and culture, TangoTime provides you with 
             the tools and resources you need to succeed.

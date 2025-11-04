@@ -58,7 +58,7 @@ const Navbar = () => {
           <li>
             <Link to="/about" className={isActive("/about") ? "active text-primary font-semibold" : "text-gray-500"}>
               <FaInfoCircle className="mr-1" />
-              About
+              About Us
             </Link>
           </li>
         </ul>

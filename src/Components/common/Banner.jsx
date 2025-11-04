@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router';
 import { FaBook, FaPlayCircle } from 'react-icons/fa';
+import CountUp from 'react-countup';
 
 const Banner = () => {
   return (
@@ -35,16 +36,22 @@ const Banner = () => {
           {/* Stats */}
           <div className="stats shadow-2xl mt-12 bg-white text-gray-800">
             <div className="stat place-items-center">
-              <div className="stat-value text-primary">5000+</div>
-              <div className="stat-title">Vocabulary Words</div>
+              <div className="stat-value text-primary">
+                <CountUp end={5000} duration={2.5} separator="," useEasing={false} />+
+                </div>
+              <div className="stat-title text-sm text-primary">Vocabulary Words</div>
             </div>
             <div className="stat place-items-center">
-              <div className="stat-value text-secondary">250+</div>
-              <div className="stat-title">Lessons</div>
+              <div className="stat-value text-secondary">
+                <CountUp end={250} duration={2.5} useEasing={false} />+
+              </div>
+              <div className="stat-title text-sm text-secondary">Lessons</div>
             </div>
             <div className="stat place-items-center">
-              <div className="stat-value text-accent">10K+</div>
-              <div className="stat-title">Active Learners</div>
+              <div className="stat-value text-accent">
+                <CountUp end={10000} duration={2.5} separator="," useEasing={false} />+
+              </div>
+              <div className="stat-title text-sm text-accent">Active Learners</div>
             </div>
           </div>
         </div>

@@ -1,5 +1,3 @@
-import React from 'react';
-
 const ValueCard = ({ icon: Icon, title, description }) => {
   return (
     <div className="card bg-base-100 shadow-xl">

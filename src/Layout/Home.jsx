@@ -116,7 +116,7 @@ const Home = () => {
       {/* CTA Section - Extra Section 3 */}
       <div className="bg-primary text-primary-content py-16">
         <div className="container mx-auto px-4">
-          <div className="card bg-primary text-primary-content shadow-2xl border-2 border-white">
+          <div className="card bg-primary text-primary-content shadow-2xl">
             <div className="card-body text-center">
               <h2 className="card-title text-4xl justify-center mb-4">Ready to Start Your Japanese Learning Journey?</h2>
               <p className="text-xl mb-6">Join thousands of students who are mastering Japanese vocabulary</p>
