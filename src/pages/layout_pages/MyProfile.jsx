@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router';
 import { FaUser, FaEnvelope, FaEdit, FaImage } from 'react-icons/fa';
-import { AuthContext } from '../Provider/AuthProvider';
+import { AuthContext } from '../../Provider/AuthProvider';
 
 const MyProfile = () => {
   const { user } = useContext(AuthContext);

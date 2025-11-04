@@ -1,7 +1,7 @@
 import React, { useState, useContext, useEffect } from 'react';
 import { useNavigate } from 'react-router';
 import { FaUser, FaImage, FaArrowLeft } from 'react-icons/fa';
-import { AuthContext } from '../Provider/AuthProvider';
+import { AuthContext } from '../../Provider/AuthProvider';
 import { toast } from 'react-toastify';
 
 const UpdateProfile = () => {

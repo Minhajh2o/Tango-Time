@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router';
 import { FaBullseye, FaChalkboardTeacher, FaBook, FaClock, FaAward, FaLightbulb } from 'react-icons/fa';
-import Banner from '../Components/common/Banner';
+import Banner from '../Components/Banner';
 import AboutSection from '../Components/common/AboutSection';
 import SuccessStats from '../Components/common/SuccessStats';
 import FeatureCard from '../Components/common/FeatureCard';

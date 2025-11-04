@@ -1,7 +1,7 @@
 import React, { useState, useContext } from 'react';
 import { Link, useNavigate } from 'react-router';
 import { FaEnvelope, FaLock, FaUser, FaGoogle, FaEye, FaEyeSlash, FaCheckCircle, FaImage } from 'react-icons/fa';
-import { AuthContext } from '../Provider/AuthProvider';
+import { AuthContext } from '../../Provider/AuthProvider';
 import { toast } from 'react-toastify';
 
 const Register = () => {

@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate, Link } from 'react-router';
 import { FaArrowLeft, FaInfoCircle, FaVolumeUp } from 'react-icons/fa';
-import vocabulariesData from '../data/vocabularies.json';
-import VocabularyModal from './VocabularyModal';
+import vocabulariesData from '../../data/vocabularies.json';
+import VocabularyModal from '../../Components/common/VocabularyModal';
 
 const Lesson = () => {
   const { lesson_no } = useParams();

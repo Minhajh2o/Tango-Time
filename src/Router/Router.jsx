@@ -1,14 +1,14 @@
 import { createBrowserRouter } from "react-router";
 import Home from "../Layout/Home";
 import About from "../Components/About";
-import Tutorial from "../Components/Tutorial";
-import StartLearning from "../Components/StartLearning";
-import Lesson from "../Components/Lesson";
-import Login from "../Components/Login";
-import Register from "../Components/Register";
-import MyProfile from "../Components/MyProfile";
-import UpdateProfile from "../Components/UpdateProfile";
-import ForgotPassword from "../Components/ForgotPassword";
+import Tutorial from "../pages/Tutorial";
+import StartLearning from "../pages/StartLearning";
+import Lesson from "../pages/layout_pages/Lesson";
+import Login from "../pages/layout_pages/Login";
+import Register from "../pages/layout_pages/Register";
+import MyProfile from "../pages/layout_pages/MyProfile";
+import UpdateProfile from "../pages/layout_pages/UpdateProfile";
+import ForgotPassword from "../pages/layout_pages/ForgotPassword";
 import Layout from "../Layout/Layout";
 import PrivateRoute from "./PrivateRoute";
 

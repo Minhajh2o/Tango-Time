@@ -2,7 +2,7 @@ import React, { useState, useContext } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router';
 import { FaEnvelope, FaArrowLeft } from 'react-icons/fa';
 import { toast } from 'react-toastify';
-import { AuthContext } from '../Provider/AuthProvider';
+import { AuthContext } from '../../Provider/AuthProvider';
 
 const ForgotPassword = () => {
   const { resetPassword } = useContext(AuthContext);
