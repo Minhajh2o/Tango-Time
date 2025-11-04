@@ -6,7 +6,7 @@ const SuccessStats = () => {
     <div className="bg-base-200 py-16">
       <div className="container mx-auto px-4">
         <h2 className="text-4xl font-bold text-center mb-12">Our Success</h2>
-        <div className="stats stats-vertical lg:stats-horizontal shadow w-full">
+        <div className="stats stats-vertical sm:grid-cols-2 lg:stats-horizontal shadow w-full">
           <div className="stat">
             <div className="stat-figure text-primary text-4xl">
               <FaUsers />

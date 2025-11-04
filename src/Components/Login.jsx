@@ -104,21 +104,21 @@ const Login = () => {
   };
 
   return (
-    <div className="min-h-screen bg-linear-to-br from-purple-50 via-pink-50 to-blue-50 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-linear-to-br from-purple-50 via-pink-50 to-blue-50 flex items-center justify-center py-6 md:py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-md w-full">
         {/* Header */}
-        <div className="text-center mb-8">
-          <h2 className="text-4xl font-bold text-gray-900 mb-2">
+        <div className="text-center mb-6 md:mb-8">
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-2">
             Welcome Back!
           </h2>
-          <p className="text-gray-500">
+          <p className="text-sm sm:text-base text-gray-500">
             Sign in to continue your Japanese learning journey
           </p>
         </div>
 
         {/* Login Card */}
         <div className="card bg-base-100 shadow-2xl">
-          <div className="card-body">
+          <div className="card-body p-5 md:p-8">
             <form onSubmit={handleSubmit} className="space-y-4">
               {/* Email Input */}
               <div className="form-control">
@@ -200,37 +200,37 @@ const Login = () => {
               <button
                 type="submit"
                 disabled={isLoading}
-                className="btn btn-primary w-full"
+                className="btn btn-primary w-full btn-sm sm:btn-md"
               >
                 {isLoading ? (
                   <>
                     <span className="loading loading-spinner loading-sm"></span>
-                    Signing in...
+                    <span className="text-sm sm:text-base">Signing in...</span>
                   </>
                 ) : (
-                  'Sign In'
+                  <span className="text-sm sm:text-base">Sign In</span>
                 )}
               </button>
             </form>
 
             {/* Divider */}
-            <div className="divider">OR</div>
+            <div className="divider text-sm">OR</div>
 
             {/* Social Login Buttons */}
             <div className="space-y-2">
               <button
                 onClick={handleGoogleLogin}
                 disabled={isLoading}
-                className="btn btn-outline w-full"
+                className="btn btn-outline w-full btn-sm sm:btn-md"
               >
                 <FaGoogle className="text-red-500" />
-                Continue with Google
+                <span className="text-sm sm:text-base">Continue with Google</span>
               </button>
             </div>
 
             {/* Sign Up Link */}
-            <div className="text-center mt-6">
-              <p className="text-sm text-gray-500">
+            <div className="text-center mt-4 md:mt-6">
+              <p className="text-xs sm:text-sm text-gray-500">
                 Don't have an account?{' '}
                 <Link to="/register" className="link link-primary font-semibold">
                   Sign up now
@@ -241,8 +241,8 @@ const Login = () => {
         </div>
 
         {/* Additional Info */}
-        <div className="text-center mt-6">
-          <p className="text-xs text-gray-500">
+        <div className="text-center mt-4 md:mt-6">
+          <p className="text-xs text-gray-500 px-4">
             By signing in, you agree to our{' '}
             <Link to="/terms" className="link link-primary">Terms of Service</Link>
             {' '}and{' '}

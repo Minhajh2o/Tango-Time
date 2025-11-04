@@ -71,22 +71,22 @@ const About = () => {
   return (
     <div className="min-h-screen bg-base-200">
       {/* Page Title */}
-      <div className="bg-linear-to-r from-blue-600 to-purple-600 text-white py-16">
+      <div className="bg-linear-to-r from-blue-600 to-purple-600 text-white py-8 md:py-12 lg:py-16">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-5xl font-bold mb-4">About TangoTime</h1>
-          <p className="text-xl">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 md:mb-4">About TangoTime</h1>
+          <p className="text-base sm:text-lg md:text-xl px-4">
             Dedicated to helping you master Japanese vocabulary
           </p>
         </div>
       </div>
 
       {/* Our Mission */}
-      <div className="container mx-auto px-4 py-12">
-        <div className="mb-16">
+      <div className="container mx-auto px-4 py-6 md:py-10 lg:py-12">
+        <div className="mb-8 md:mb-12 lg:mb-16">
           <div className="card bg-base-100 shadow-xl">
-            <div className="card-body">
-              <h2 className="card-title text-3xl mb-4">Our Mission</h2>
-              <p className="text-lg text-gray-500 leading-relaxed">
+            <div className="card-body p-4 md:p-6 lg:p-8">
+              <h2 className="card-title text-2xl sm:text-3xl mb-3 md:mb-4">Our Mission</h2>
+              <p className="text-sm sm:text-base md:text-lg text-gray-500 leading-relaxed">
                 At TangoTime, we believe that everyone should have the
                 opportunity to master Japanese vocabulary in an effective and
                 engaging way. Our mission is to make high-quality Japanese
@@ -94,7 +94,7 @@ const About = () => {
                 comprehensive vocabulary courses, expert instruction, and a
                 supportive learning community.
               </p>
-              <p className="text-lg text-gray-500 leading-relaxed mt-4">
+              <p className="text-sm sm:text-base md:text-lg text-gray-500 leading-relaxed mt-3 md:mt-4">
                 Founded in 2020, we've grown from a small passion project to a
                 leading platform with thousands of students from over 50
                 countries. Our team of experienced Japanese language educators
@@ -106,9 +106,9 @@ const About = () => {
         </div>
 
         {/* Our Values */}
-        <div className="mb-16">
-          <h2 className="text-3xl font-bold text-center mb-8">Our Values</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="mb-8 md:mb-12 lg:mb-16">
+          <h2 className="text-2xl sm:text-3xl font-bold text-center mb-6 md:mb-8">Our Values</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
             {values.map((value, index) => (
               <ValueCard
                 key={index}
@@ -121,9 +121,9 @@ const About = () => {
         </div>
 
         {/* Our Team */}
-        <div className="mb-16">
-          <h2 className="text-3xl font-bold text-center mb-8">Meet Our Team</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="mb-8 md:mb-12 lg:mb-16">
+          <h2 className="text-2xl sm:text-3xl font-bold text-center mb-6 md:mb-8">Meet Our Team</h2>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-6">
             {teamMembers.map((member, index) => (
               <TeamMemberCard
                 key={index}
@@ -137,12 +137,12 @@ const About = () => {
         </div>
 
         {/* Our Impact */}
-        <div className="card bg-linear-to-r from-blue-600 to-purple-600 text-white shadow-xl mb-8">
-          <div className="card-body">
-            <h2 className="card-title text-3xl justify-center mb-6">
+        <div className="card bg-linear-to-r from-blue-600 to-purple-600 text-white shadow-xl mb-6 md:mb-8">
+          <div className="card-body p-4 md:p-6 lg:p-8">
+            <h2 className="card-title text-2xl sm:text-3xl justify-center mb-4 md:mb-6">
               Our Impact
             </h2>
-            <div className="stats stats-vertical lg:stats-horizontal shadow w-full from-blue-600 to-purple-600 text-white">
+            <div className="stats stats-vertical sm:grid-cols-2 lg:stats-horizontal shadow w-full from-blue-600 to-purple-600 text-white">
               <StatCard
                 icon={FaUsers}
                 title="Students Taught"
@@ -174,16 +174,16 @@ const About = () => {
         {/* Call to Action */}
         <div className="text-center">
           <div className="card bg-base-100 shadow-xl">
-            <div className="card-body">
-              <h2 className="card-title text-3xl justify-center mb-4">
+            <div className="card-body p-4 md:p-6 lg:p-8">
+              <h2 className="card-title text-2xl sm:text-3xl justify-center mb-3 md:mb-4">
                 Join Our Community
               </h2>
-              <p className="text-lg text-gray-500 mb-6">
+              <p className="text-base md:text-lg text-gray-500 mb-4 md:mb-6 px-4">
                 Ready to start your Japanese vocabulary journey? Join thousands
                 of students learning with us today.
               </p>
               <div className="card-actions justify-center">
-                <Link to="/start-learning" className="btn btn-primary btn-lg">
+                <Link to="/start-learning" className="btn btn-primary btn-sm sm:btn-md lg:btn-lg">
                   Start Learning Now
                 </Link>
               </div>

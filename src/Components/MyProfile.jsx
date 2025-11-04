@@ -7,14 +7,14 @@ const MyProfile = () => {
   const { user } = useContext(AuthContext);
 
   return (
-    <div className="min-h-screen bg-base-200 py-12">
+    <div className="min-h-screen bg-base-200 py-6 md:py-10 lg:py-12">
       <div className="container mx-auto px-4">
         {/* Welcome Header */}
-        <div className="text-center mb-8">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-100 mb-2">
+        <div className="text-center mb-6 md:mb-8">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-100 mb-2">
             Welcome, <span className="text-primary">{user?.displayName || 'User'}!</span>
           </h1>
-          <p className="text-lg text-gray-500">
+          <p className="text-base sm:text-lg text-gray-500">
             Manage your profile information
           </p>
         </div>
@@ -22,16 +22,16 @@ const MyProfile = () => {
         {/* Profile Card */}
         <div className="max-w-2xl mx-auto">
           <div className="card bg-base-100 shadow-2xl">
-            <div className="card-body">
+            <div className="card-body p-5 md:p-8">
               {/* Profile Image */}
-              <div className="flex justify-center mb-6">
+              <div className="flex justify-center mb-4 md:mb-6">
                 <div className="avatar">
-                  <div className="w-32 h-32 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+                  <div className="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
                     {user?.photoURL ? (
                       <img src={user.photoURL} alt={user.displayName} />
                     ) : (
                       <div className="bg-primary text-primary-content flex items-center justify-center w-full h-full">
-                        <FaUser className="text-5xl" />
+                        <FaUser className="text-3xl sm:text-4xl md:text-5xl" />
                       </div>
                     )}
                   </div>
@@ -39,17 +39,17 @@ const MyProfile = () => {
               </div>
 
               {/* Profile Information */}
-              <div className="space-y-6">
+              <div className="space-y-4 md:space-y-6">
                 {/* Name */}
                 <div className="form-control">
                   <label className="label">
-                    <span className="label-text font-semibold text-lg flex items-center gap-2">
+                    <span className="label-text font-semibold text-sm sm:text-base md:text-lg flex items-center gap-2">
                       <FaUser className="text-primary" />
                       Full Name
                     </span>
                   </label>
-                  <div className="bg-base-200 p-4 rounded-lg">
-                    <p className="text-gray-300 text-lg">
+                  <div className="bg-base-200 p-3 md:p-4 rounded-lg">
+                    <p className="text-gray-300 text-sm sm:text-base md:text-lg wrap-break-word">
                       {user?.displayName || 'Not provided'}
                     </p>
                   </div>
@@ -58,13 +58,13 @@ const MyProfile = () => {
                 {/* Email */}
                 <div className="form-control">
                   <label className="label">
-                    <span className="label-text font-semibold text-lg flex items-center gap-2">
+                    <span className="label-text font-semibold text-sm sm:text-base md:text-lg flex items-center gap-2">
                       <FaEnvelope className="text-primary" />
                       Email Address
                     </span>
                   </label>
-                  <div className="bg-base-200 p-4 rounded-lg">
-                    <p className="text-gray-300 text-lg">
+                  <div className="bg-base-200 p-3 md:p-4 rounded-lg">
+                    <p className="text-gray-300 text-sm sm:text-base md:text-lg break-all">
                       {user?.email}
                     </p>
                   </div>
@@ -73,7 +73,7 @@ const MyProfile = () => {
                 {/* Photo URL */}
                 <div className="form-control">
                   <label className="label">
-                    <span className="label-text font-semibold text-lg flex items-center gap-2">
+                    <span className="label-text font-semibold text-sm sm:text-base md:text-lg flex items-center gap-2">
                       <FaImage className="text-primary" />
                       Profile Photo URL
                     </span>

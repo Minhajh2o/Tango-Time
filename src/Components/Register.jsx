@@ -155,21 +155,21 @@ const Register = () => {
   const passwordStrength = getPasswordStrength();
 
   return (
-    <div className="min-h-screen bg-linear-to-br from-blue-50 via-purple-50 to-pink-50 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-linear-to-br from-blue-50 via-purple-50 to-pink-50 flex items-center justify-center py-6 md:py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-md w-full">
         {/* Header */}
-        <div className="text-center mb-8">
-          <h2 className="text-4xl font-bold text-gray-900 mb-2">
+        <div className="text-center mb-6 md:mb-8">
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-2">
             Create Account
           </h2>
-          <p className="text-gray-500">
+          <p className="text-sm sm:text-base text-gray-500">
             Join TangoTime and start your Japanese learning adventure
           </p>
         </div>
 
         {/* Registration Card */}
         <div className="card bg-base-100 shadow-2xl">
-          <div className="card-body">
+          <div className="card-body p-5 md:p-8">
             <form onSubmit={handleSubmit} className="space-y-4">
               {/* Name Input */}
               <div className="form-control">

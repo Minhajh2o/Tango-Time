@@ -78,34 +78,35 @@ const Lesson = () => {
   return (
     <div className="min-h-screen bg-base-200">
       {/* Page Header */}
-      <div className="bg-linear-to-r from-purple-600 to-blue-600 text-white py-12">
+      <div className="bg-linear-to-r from-purple-600 to-blue-600 text-white py-6 md:py-10 lg:py-12">
         <div className="container mx-auto px-4">
           <button
             onClick={() => navigate('/start-learning')}
-            className="btn btn-ghost text-white mb-4"
+            className="btn btn-ghost text-white mb-3 md:mb-4 btn-sm md:btn-md"
           >
-            <FaArrowLeft className="mr-2" />
-            Back to Lessons
+            <FaArrowLeft className="mr-1 md:mr-2" />
+            <span className="hidden sm:inline">Back to Lessons</span>
+            <span className="sm:hidden">Back</span>
           </button>
-          <h1 className="text-4xl md:text-5xl font-bold">Lesson {lesson_no}</h1>
-          <p className="text-xl mt-2">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold">Lesson {lesson_no}</h1>
+          <p className="text-base sm:text-lg md:text-xl mt-2">
             {vocabularies.length} vocabularies to master
           </p>
         </div>
       </div>
 
-      <div className="container mx-auto px-4 py-12">
+      <div className="container mx-auto px-4 py-6 md:py-10 lg:py-12">
         {vocabularies.length === 0 ? (
-          <div className="text-center py-20">
-            <p className="text-2xl text-gray-500">No vocabularies found for this lesson.</p>
-            <Link to="/start-learning" className="btn btn-primary mt-4">
+          <div className="text-center py-12 md:py-20">
+            <p className="text-xl md:text-2xl text-gray-500 px-4">No vocabularies found for this lesson.</p>
+            <Link to="/start-learning" className="btn btn-primary mt-4 btn-sm sm:btn-md">
               Go Back to Lessons
             </Link>
           </div>
         ) : (
           <>
             {/* Vocabulary Cards Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 mb-6 md:mb-8">
               {vocabularies.map((vocab) => (
                 <div
                   key={vocab.id}
@@ -113,53 +114,53 @@ const Lesson = () => {
                     vocab.difficulty
                   )} hover:shadow-2xl transition-all`}
                 >
-                  <div className="card-body">
+                  <div className="card-body p-4 md:p-6">
                     {/* Difficulty Badge */}
-                    <div className="flex justify-between items-start mb-2">
+                    <div className="flex justify-between items-start mb-2 flex-wrap gap-2">
                       <span
                         className={`badge ${getDifficultyBadge(
                           vocab.difficulty
-                        )} badge-lg`}
+                        )} badge-sm sm:badge-md md:badge-lg`}
                       >
                         {vocab.difficulty}
                       </span>
-                      <span className="badge badge-outline text-primary">
+                      <span className="badge badge-outline text-primary badge-sm sm:badge-md">
                         {vocab.part_of_speech}
                       </span>
                     </div>
 
                     {/* Word in Japanese with Speaker Icon */}
                     <div className="flex items-center gap-2 mb-2">
-                      <h2 className="card-title text-3xl font-bold text-primary">
+                      <h2 className="card-title text-2xl sm:text-3xl font-bold text-primary break-all">
                         {vocab.word}
                       </h2>
                       <button
                         onClick={() => speakWord(vocab.word)}
-                        className="btn btn-circle btn-sm btn-primary"
+                        className="btn btn-circle btn-xs sm:btn-sm btn-primary shrink-0"
                         title="Listen to pronunciation"
                       >
-                        <FaVolumeUp />
+                        <FaVolumeUp className="text-xs sm:text-sm" />
                       </button>
                     </div>
 
                     {/* Pronunciation */}
-                    <p className="text-xl text-gray-700 italic mb-2">
+                    <p className="text-base sm:text-lg md:text-xl text-gray-700 italic mb-2">
                       {vocab.pronunciation}
                     </p>
 
                     {/* Meaning */}
-                    <p className="text-lg font-semibold text-gray-900 mb-4">
+                    <p className="text-sm sm:text-base md:text-lg font-semibold text-gray-900 mb-3 md:mb-4">
                       Meaning: {vocab.meaning}
                     </p>
 
                     {/* When to Say Button */}
-                    <div className="card-actions justify-end mt-4">
+                    <div className="card-actions justify-end mt-2 md:mt-4">
                       <button
                         onClick={() => handleWhenToSay(vocab)}
-                        className="btn btn-primary btn-sm"
+                        className="btn btn-primary btn-xs sm:btn-sm"
                       >
-                        <FaInfoCircle className="mr-2" />
-                        When to Say
+                        <FaInfoCircle className="mr-1 sm:mr-2" />
+                        <span className="text-xs sm:text-sm">When to Say</span>
                       </button>
                     </div>
                   </div>
@@ -168,12 +169,12 @@ const Lesson = () => {
             </div>
 
             {/* Back to Lesson Button */}
-            <div className="text-center mt-12">
+            <div className="text-center mt-8 md:mt-12">
               <Link
                 to="/start-learning"
-                className="btn btn-primary btn-lg"
+                className="btn btn-primary btn-sm sm:btn-md lg:btn-lg"
               >
-                <FaArrowLeft className="mr-2" />
+                <FaArrowLeft className="mr-1 sm:mr-2" />
                 Back to Lesson
               </Link>
             </div>

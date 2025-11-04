@@ -68,18 +68,18 @@ const ForgotPassword = () => {
         </div>
 
         {/* Header */}
-        <div className="text-center mb-8">
-          <h2 className="text-4xl font-bold text-gray-900 mb-2">
+        <div className="text-center mb-6 md:mb-8">
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-2">
             Forgot Password?
           </h2>
-          <p className="text-gray-500">
+          <p className="text-sm sm:text-base text-gray-500 px-4">
             No worries! Enter your email and we'll send you reset instructions.
           </p>
         </div>
 
         {/* Reset Password Card */}
         <div className="card bg-base-100 shadow-2xl">
-          <div className="card-body">
+          <div className="card-body p-5 md:p-8">
             <form onSubmit={handleSubmit} className="space-y-6">
               {/* Email Input */}
               <div className="form-control">
