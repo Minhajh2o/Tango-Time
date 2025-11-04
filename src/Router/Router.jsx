@@ -3,6 +3,7 @@ import Home from "../Layout/Home";
 import About from "../Components/About";
 import Tutorial from "../Components/Tutorial";
 import StartLearning from "../Components/StartLearning";
+import Lesson from "../Components/Lesson";
 import Login from "../Components/Login";
 import Register from "../Components/Register";
 import Layout from "../Layout/Layout";
@@ -15,6 +16,14 @@ const Router = createBrowserRouter([
     children: [
       { index: true, element: <Home /> },
       { path: "start-learning", element: <StartLearning /> },
+      {
+        path: "lesson/:lesson_no",
+        element: (
+          <PrivateRoute>
+            <Lesson />
+          </PrivateRoute>
+        ),
+      },
       {
         path: "tutorial",
         element: (

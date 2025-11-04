@@ -1,4 +1,3 @@
-import React from 'react';
 import { FaPlay, FaClock } from 'react-icons/fa';
 
 const TutorialCard = ({ title, difficulty, duration, description, thumbnail: Icon, onWatch }) => {

@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "title": "Learn Japanese in 30 Minutes",
+    "embedded_link": "https://www.youtube.com/embed/tnxqK7jkgS8?si=ua8SS6zjatJFtHVT",
+    "description": "Basic Japanese for beginners - essential phrases and greetings"
+  },
+  {
+    "id": 2,
+    "title": "Japanese Hiragana & Katakana",
+    "embedded_link": "https://www.youtube.com/embed/6p9Il_j0zjc",
+    "description": "Complete guide to learning Japanese writing systems"
+  },
+  {
+    "id": 3,
+    "title": "100 Common Japanese Words",
+    "embedded_link": "https://www.youtube.com/embed/_9CG7A3n0v8?si=qozeISlf-MSW0Ll4",
+    "description": "Most frequently used Japanese vocabulary for daily conversations"
+  },
+  {
+    "id": 4,
+    "title": "Japanese Grammar for Beginners",
+    "embedded_link": "https://www.youtube.com/embed/BckC9gXghIc?si=JxMG-48lfzRb1Zr1",
+    "description": "Essential Japanese grammar rules explained simply"
+  },
+  {
+    "id": 5,
+    "title": "Japanese Pronunciation Guide",
+    "embedded_link": "https://www.youtube.com/embed/4Irzvrcpf4Q?si=pWRH-RDjOAdDjkVv",
+    "description": "Master Japanese pronunciation and accent patterns"
+  },
+  {
+    "id": 6,
+    "title": "Learn Japanese While You Sleep",
+    "embedded_link": "https://www.youtube.com/embed/kYson5zgwLE?si=ezi2fkv8kRMAJGYo",
+    "description": "8 hours of basic Japanese phrases with English translations"
+  },
+  {
+    "id": 7,
+    "title": "Japanese Counting & Numbers",
+    "embedded_link": "https://www.youtube.com/embed/qqT1oL7Edyk?si=MJWBZLSdfbSTFFxr",
+    "description": "Complete guide to Japanese number systems and counting"
+  },
+  {
+    "id": 8,
+    "title": "Japanese Conversation Practice",
+    "embedded_link": "https://www.youtube.com/embed/a4dghkyVOnE?si=RgC-pR_wMwome_SP",
+    "description": "Real-life Japanese conversations with subtitles"
+  },
+  {
+    "id": 9,
+    "title": "Japanese Kanji Basics",
+    "embedded_link": "https://www.youtube.com/embed/mPppVDX_GiY?si=blphfpA95IcGtxH7",
+    "description": "Introduction to the most common Kanji characters for beginners"
+  },
+  {
+    "id": 10,
+    "title": "Japanese Listening Practice",
+    "embedded_link": "https://www.youtube.com/embed/UJyBgOdh9IA?si=qzVyIi8H-a_gb9uP",
+    "description": "Improve your listening comprehension with simple Japanese stories"
+  }
+]
