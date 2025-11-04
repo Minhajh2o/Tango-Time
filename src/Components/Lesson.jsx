@@ -183,7 +183,7 @@ const Lesson = () => {
 
               {/* Example */}
               <div className="bg-purple-50 p-4 rounded-lg border-l-4 border-primary">
-                <h4 className="font-semibold text-lg mb-2">Example:</h4>
+                <h4 className="font-semibold text-primary text-lg mb-2">Example:</h4>
                 <p className="text-gray-900 whitespace-pre-line">
                   {selectedVocab.example}
                 </p>

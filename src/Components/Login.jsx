@@ -2,6 +2,7 @@ import React, { useState, useContext } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router';
 import { FaEnvelope, FaLock, FaGoogle, FaEye, FaEyeSlash } from 'react-icons/fa';
 import { AuthContext } from '../Provider/AuthProvider';
+import { toast } from 'react-toastify';
 
 const Login = () => {
   const navigate = useNavigate();
@@ -64,16 +65,23 @@ const Login = () => {
     
     try {
       await signInUser(formData.email, formData.password);
+      toast.success('Successfully logged in!', {
+        position: 'top-right',
+        autoClose: 3000,
+      });
       navigate(from, { replace: true });
     } catch (error) {
       setIsLoading(false);
       console.error(error);
       if (error.code === 'auth/user-not-found' || error.code === 'auth/wrong-password') {
         setErrors({ password: 'Invalid email or password' });
+        toast.error('Invalid email or password');
       } else if (error.code === 'auth/too-many-requests') {
         setErrors({ password: 'Too many failed attempts. Please try again later.' });
+        toast.error('Too many failed attempts. Please try again later.');
       } else {
         setErrors({ password: 'An error occurred. Please try again.' });
+        toast.error('Login failed. Please try again.');
       }
     }
   };
@@ -82,11 +90,16 @@ const Login = () => {
     setIsLoading(true);
     try {
       await signInWithGoogle();
+      toast.success('Successfully logged in with Google!', {
+        position: 'top-right',
+        autoClose: 3000,
+      });
       navigate(from, { replace: true });
     } catch (error) {
       setIsLoading(false);
       console.error(error);
       setErrors({ password: 'Google sign-in failed. Please try again.' });
+      toast.error('Google sign-in failed. Please try again.');
     }
   };
 
@@ -174,7 +187,11 @@ const Login = () => {
                   <input type="checkbox" className="checkbox checkbox-primary checkbox-sm" />
                   <span className="label-text">Remember me</span>
                 </label>
-                <Link to="/forgot-password" className="label-text-alt link link-primary">
+                <Link 
+                  to="/forgot-password" 
+                  state={{ email: formData.email }}
+                  className="label-text-alt link link-primary"
+                >
                   Forgot password?
                 </Link>
               </div>

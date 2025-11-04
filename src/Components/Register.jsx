@@ -2,6 +2,7 @@ import React, { useState, useContext } from 'react';
 import { Link, useNavigate } from 'react-router';
 import { FaEnvelope, FaLock, FaUser, FaGoogle, FaEye, FaEyeSlash, FaCheckCircle, FaImage } from 'react-icons/fa';
 import { AuthContext } from '../Provider/AuthProvider';
+import { toast } from 'react-toastify';
 
 const Register = () => {
   const navigate = useNavigate();
@@ -56,10 +57,10 @@ const Register = () => {
       newErrors.password = 'Password is required';
     } else if (formData.password.length < 6) {
       newErrors.password = 'Password must be at least 6 characters';
-    } else if (!/(?=.*[a-z])(?=.*[A-Z])/.test(formData.password)) {
-      newErrors.password = 'Password must contain both uppercase and lowercase letters';
-    } else if (!/(?=.*\d)/.test(formData.password)) {
-      newErrors.password = 'Password must contain at least one number';
+    } else if (!/(?=.*[a-z])/.test(formData.password)) {
+      newErrors.password = 'Password must have a lowercase letter';
+    } else if (!/(?=.*[A-Z])/.test(formData.password)) {
+      newErrors.password = 'Password must have an uppercase letter';
     }
     
     // Confirm password validation
@@ -94,6 +95,10 @@ const Register = () => {
       // Update profile with name and photo
       await updateUserProfile(formData.name, formData.photoURL || null);
       
+      toast.success('Account created successfully!', {
+        position: 'top-right',
+        autoClose: 3000,
+      });
       setIsLoading(false);
       navigate('/');
     } catch (error) {
@@ -101,10 +106,13 @@ const Register = () => {
       console.error(error);
       if (error.code === 'auth/email-already-in-use') {
         setErrors({ email: 'This email is already registered' });
+        toast.error('This email is already registered');
       } else if (error.code === 'auth/weak-password') {
         setErrors({ password: 'Password is too weak' });
+        toast.error('Password is too weak');
       } else {
         setErrors({ password: 'Registration failed. Please try again.' });
+        toast.error('Registration failed. Please try again.');
       }
     }
   };
@@ -113,11 +121,16 @@ const Register = () => {
     setIsLoading(true);
     try {
       await signInWithGoogle();
+      toast.success('Account created successfully with Google!', {
+        position: 'top-right',
+        autoClose: 3000,
+      });
       navigate('/');
     } catch (error) {
       setIsLoading(false);
       console.error(error);
       setErrors({ password: 'Google sign-up failed. Please try again.' });
+      toast.error('Google sign-up failed. Please try again.');
     }
   };
 
